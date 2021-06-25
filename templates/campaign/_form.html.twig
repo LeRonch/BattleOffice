@@ -1,0 +1,41 @@
+
+<div class="row">
+    {{ form_start(form) }}
+        <div class="input-field col s12 l6">
+            {{ form_widget(form.name) }}
+            {{ form_label(form.name) }}
+
+            <label for="author">Votre Nom</label>
+        </div>
+            <div class="input-field col s12 l6">
+            <input id="goal" type="email" class="validate">
+            <label for="email">Votre Email</label>
+        </div>
+
+        <div class="input-field col s12 l8">
+            {{ form_widget(form.title) }}
+            {{ form_label(form.title) }}
+        </div>
+        <div class="input-field col s12">
+            {{ form_widget(form.content, {'attr': {'class': 'materialize-textarea'}}) }}
+            {{ form_label(form.content) }}
+
+            {# <textarea id="description" class="materialize-textarea" placeholder="Décrivez à vos amis pourquoi vous faites une campagne"></textarea> #}
+        </div>
+        <div class="input-field col s12 l6">
+            {{ form_widget(form.goal) }}
+            {{ form_label(form.goal) }}
+
+
+            {# <input id="goal" type="number" class="validate"> #}
+            {# <label for="goal">Votre objectif en euros</label> #}
+        </div>
+        <button class="btn btn-large waves-effect waves-light pink lighten-1 col s12" style="margin-top: 20px;" type="submit" name="action">
+            Validez la campagne
+            <i class="material-icons right">send</i>
+        </button>
+    {{ form_end(form) }}
+</div>
+           
+
+

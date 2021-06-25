@@ -1,0 +1,54 @@
+{{ form_start(form) }}
+   
+ <div class="card">
+    <div class="card-content">
+        <div class="row">
+            <form action="/charge" method="post" id="payment-form">
+                <div class="form-row">
+                  <h5 class="center">Votre identité</h5>
+                <div class="input-field col s12 l6">
+                {{ form_widget(form.participant_id.email) }}
+                {{ form_label(form.participant_id.email) }}
+              </div>
+                            <div class="input-field col s12 l6">
+                               {{ form_widget(form.amount) }}
+                                {{ form_label(form.amount) }}
+                                
+                            </div>
+                            <p>
+                                <label>
+                                    {{form_widget(form.participant_id.is_anomymous)}}
+                                    <span>Masquer mon identité auprès des autres participants</span>
+                                </label>
+                            </p>
+                            <div class="clearfix"></div>
+                            <h5 class="center">Paiement</h5>
+                            <div class="input-field col s12">
+                            {{form_widget(form.participant_id.name)}}
+                            {{form_label(form.participant_id.name)}}
+                            </div>
+                            <label for="card-element">
+
+                         
+                             </label>
+                             <div id="card-element">
+                                 <!-- A Stripe Element will be inserted here. -->
+                             </div>
+                            <div id="card-errors" role="alert"></div>
+                            </div>
+                            <div class="input-field col s12 l6">   
+                                <a href="#!" class="btn btn-large waves-effect waves-light grey col s12">Annuler</a>
+                           </div>
+                               <div class="input-field col s12 l6">
+                                <button class="btn btn-large waves-effect waves-light pink lighten-1 col s12" type="submit" name="action">
+                                    Participer
+                                    <i class="material-icons right">euro_symbol</i>
+                                </button>
+                            </div>
+                          
+                          {{ form_end(form) }}
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>

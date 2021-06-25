@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Payment{% endblock %}
+
+{% block body %}
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <h1 class="header center white-text light"> {{campaign.title}}</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">- Organisée par :  {{campaign.name}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="/assets/images/8.jpg" alt="Titre de la campagne"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 center">
+                    <h4>Participez en quelques secondes</h4>
+                </div>
+            </div>
+            <!--   Form Section   -->
+           
+        </div>
+    </div>
+    <h1>Create new Payment</h1>
+
+    {{ include('payment/_form.html.twig') }}
+
+    <a href="{{ path('payment_index') }}">back to list</a>
+{% endblock %}
+
+{% block javascripts %}
+         <script>
+            // Set your publishable key: remember to change this to your live publishable key in production
+            // See your keys here: https://dashboard.stripe.com/apikeys
+            var stripe = Stripe('pk_test_51IuuelAX6HnD6DxptsgF5YRlm4kQX4LiZyzdRAD7YZCIB5YZs7SvhdjcE7mh9NpQDppWryfLa9AY5wYc0FJi4fSy00DFDY6Mft');
+            var elements = stripe.elements();
+
+            // Custom styling can be passed to options when creating an Element.
+            var style = {
+            base: {
+                // Add your base input styles here. For example:
+                fontSize: '16px',
+                color: '#32325d',
+            },
+            };
+
+            // Create an instance of the card Element.
+            var card = elements.create('card', {style: style});
+
+            // Add an instance of the card Element into the `card-element` <div>.
+            card.mount('#card-element');
+        </script>   
+{% endblock %}
