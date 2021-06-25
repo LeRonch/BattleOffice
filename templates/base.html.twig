@@ -5,75 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{% block title %}Cagnot'potes!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-               <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
-     <!--Simple MDE -->
-    {# <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"> #}
-
-    <!--Custom styles-->
-    <link type="text/css" rel="stylesheet" href="/assets/css/styles.css"  media="screen,projection"/>
-        
+        <title>{% block title %}Demo{% endblock %}</title>
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
         {% endblock %}
     </head>
     <body>
-     <div class="navbar-fixed">
-        <nav class="white">
-            <div class="nav-wrapper">
-                <a href="/" class="brand-logo center">Cagnot'Potes</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{path('campaign_new')}}" class="waves-effect waves-light btn pink lighten-1">Créer une campagne</a></li>
-                </ul>
-
-                <ul id="nav-mobile" class="sidenav">
-                    <li><a href="{{path('campaign_new')}}" class="waves-effect waves-light btn pink lighten-1">Créer une campagne</a></li>
-                </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-    </div>
-        {% block body %}{% endblock %}
-        
-           <footer class="page-footer teal">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Cagnot'Potes</h5>
-                    <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo.</p>
-                </div>
-                <div class="col l3 s12 offset-l3">
-                    <h5 class="white-text">Liens</h5>
-                    <ul class="footer-links">
-                        <li><a class="white-text" href="#!">Comment ça marche ?</a></li>
-                        <li><a class="white-text" href="{{path('campaign_index')}}">Voir les campagnes</a></li>
-                        <li><a class="white-text" href="{{path('campaign_new')}}">Créer une campagne</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                Made with love by <a class="white-text" href="http://trombi.simplon-roanne.com/">Simplon Roanne</a>
-            </div>
-        </div>
-    </footer>
-
-          <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
-    <!--Javascript Markdown editor-->
-    {# <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script> #}
-    <script>
-        var simplemde = new SimpleMDE({ element: document.getElementById("description") });
-    </script>
-    <!--Init & custom scripts-->
-    <script type="text/javascript" src="/assets/js/scripts.js"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-       
+         
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
