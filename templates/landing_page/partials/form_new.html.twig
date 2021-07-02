@@ -47,9 +47,7 @@
                 <div class="form-error"></div>
             </div>
             <div class="input-field">
-                <select>
-                    <option>France</option>
-                </select>
+                {{ form_widget(form.client.pays) }}
                 <label>Pays</label>
                 <div class="form-error"></div>
             </div>
@@ -105,27 +103,18 @@
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
-                    <select>
-                        <option>France</option>
-                    </select>
+                   
+                        {{form_widget(form.livraison.pays)}}
+                         {{form_label(form.livraison.pays)}}
                     <label>Pays</label>
                     <div class="form-error"></div>
                 </div>
                 <div class="input-field">
                    {{ form_widget(form.livraison.telephone) }}
-                    <label>Téléphone</label>
+                   {{ form_label(form.livraison.telephone) }}
                     <div class="form-error"></div>
                 </div>
-                 {# <div class="input-field">
-                   {{ form_widget(form.livraison.) }}
-                    <label>Téléphone</label>
-                    <div class="form-error"></div>
-                </div>
-                 <div class="input-field">
-                   {{ form_widget(form.livraison.) }}
-                    <label>Téléphone</label>
-                    <div class="form-error"></div>
-                </div> #}
+                
             </div>
         </li>
     </ul>
@@ -141,7 +130,7 @@
                 <div class="collapsible-body card-form">
                     <div class="row">
                         <div class="center-align">
-                            <button type="submit" name="order[payment_method]" value="lpmonetico" class="btn-large btn-block waves-effect waves-light">{{ button_label|default('Continuer') }}</button>
+                         <button type="submit" name="type" value="stripe" class="btn-large btn-block waves-effect waves-light">Continuer</button>
                             <p>J'accepte les <a href="https://feelwellshop.com/fr/conditions-generales-de-ventes" target="_blank">conditions générales de vente</a></p>
                             <img class="responsive-img monetico" src="assets/images/paiement-securise-stripe.jpeg" alt="Stripe protège vos achats">
                         </div>
@@ -153,7 +142,7 @@
                 <div class="collapsible-body">
                     <div class="row">
                         <div class="center-align">
-                            <button type="submit" name="order[payment_method]" value="lppaypal" class="btn-large btn-block waves-effect waves-light">Continuer sur PayPal</button>
+                           <button type="submit" name="type" value="paypal" class="btn-large btn-block waves-effect waves-light">Continuer sur PayPal</button>
                             <p>J'accepte les <a href="https://feelwellshop.com/fr/conditions-generales-de-ventes" target="_blank">conditions générales de vente</a></p>
                         </div>
                     </div>

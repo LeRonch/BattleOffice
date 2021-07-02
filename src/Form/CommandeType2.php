@@ -11,14 +11,15 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CommandeType extends AbstractType
+class CommandeType2 extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-           
-            ->add('client', ClientType::class)
-            ->add('livraison', LivraisonType::class)
+            ->add('prenom_cb')
+            ->add('nom_cb')
+       
+        
         ;
     }
 
