@@ -18,7 +18,9 @@ class CommandeType extends AbstractType
         $builder
            
             ->add('client', ClientType::class)
-            ->add('livraison', LivraisonType::class)
+            ->add('livraison', LivraisonType::class,[
+                'required'=>false,
+            ])
         ;
     }
 

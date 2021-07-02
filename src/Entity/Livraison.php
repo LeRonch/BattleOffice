@@ -35,7 +35,7 @@ class Livraison
     private $adresse_livraison;
 
     /**
-     * @ORM\Column(type="string", length=255,nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $complement_livraison;
 

@@ -16,14 +16,8 @@ class LivraisonType extends AbstractType
         $builder
             ->add('prenom')
             ->add('nom')
-            ->add('adresse_livraison',TextType::class,[
-                'required'=>true,
-                'empty_data'=>''
-            ])
-            ->add('complement_livraison',TextType::class,[
-                'required'=>true,
-                'empty_data'=>''
-            ])
+            ->add('adresse_livraison',TextType::class)
+            ->add('complement_livraison',TextType::class)
             ->add('ville')
             ->add('code_postal',TextType::class,[
                 'attr' => ['pattern' => "^(([0-8][0-9])|(9[0-5])|(2[ab]))[0-9]{3}$", 'maxlength' => 5]
